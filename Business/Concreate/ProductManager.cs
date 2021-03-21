@@ -17,31 +17,20 @@ namespace Business.Concreate
             _productDal = productDal;
         }
 
-        public void Add(Product product)
-        {
-            _productDal.Add(product);
-        }
-
-        public void Delete(Product product)
-        {
-            _productDal.Delete(product);
-        }
-
         public List<Product> GetAll()
         {
             //İş kodları
-            return _productDal.GetAll();
-            
+            return _productDal.GetAll();  
         }
 
-        public List<Product> GetAllByCategory(int categoryId)
+        public List<Product> GetAllByCategoryId(int id)
         {
-            return _productDal.GetAllByCategory(categoryId);
+            return _productDal.GetAll(p=>p.CategoryId==id);
         }
 
-        public void Update(Product product)
+        public List<Product> GetByUnitPrice(decimal min, decimal max)
         {
-            _productDal.Update(product);
+            return _productDal.GetAll(p => p.UnitPrice >= min && p.UnitPrice <= max);
         }
     }
 }
