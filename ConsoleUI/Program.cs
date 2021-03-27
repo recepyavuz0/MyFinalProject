@@ -17,8 +17,6 @@ namespace ConsoleUI
             {
                 Console.WriteLine(product.ProductName+":"+product.UnitPrice);
             }
-
-            
         }
     }
 }

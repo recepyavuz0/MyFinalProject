@@ -1,7 +1,5 @@
-﻿using Entities.Concreate;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Core.DataAccess;
+using Entities.Concreate;
 
 namespace DataAccess.Abstract
 {
@@ -10,3 +8,5 @@ namespace DataAccess.Abstract
         
     }
 }
+
+//Code Refactoring => Kodun iyileştirilmesi
